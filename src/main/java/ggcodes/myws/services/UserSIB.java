@@ -38,4 +38,16 @@ public class UserSIB implements UserSEI{
 		return false;
 	}
 
+	@Override
+	public User getUser(long id) {
+		Connection con = SingleConnection.getConnection();
+		UserDAO dao = new UserDAOImpl(con);
+		try {
+			return dao.getUser(id);		
+		} catch (SQLException e) {
+			System.out.println(e);
+		}
+		return null;
+	}
+
 }

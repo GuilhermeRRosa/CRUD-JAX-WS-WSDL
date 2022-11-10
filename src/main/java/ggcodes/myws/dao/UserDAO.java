@@ -8,5 +8,5 @@ public interface UserDAO {
 
 	long save(User u) throws SQLException;
 	boolean delete(long id) throws SQLException;
-	
+	User getUser(long id) throws SQLException;
 }

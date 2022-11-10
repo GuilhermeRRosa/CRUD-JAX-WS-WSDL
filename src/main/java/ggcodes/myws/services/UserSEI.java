@@ -16,4 +16,7 @@ public interface UserSEI {
 	@WebMethod
 	public boolean delete(long id);
 	
+	@WebMethod
+	public User getUser(long id);
+	
 }
